@@ -16,3 +16,7 @@ So, does that mean that if our shuffle function deck type ,we write one function
 No.
 
 Here come the role of interfaces.
+
+A concrete type can help in creating a value
+An interface type won't
+

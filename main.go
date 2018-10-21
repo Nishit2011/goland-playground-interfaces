@@ -4,7 +4,9 @@ import "fmt"
 
 //interface being used to define what different type of function with return type it should have
 //and anyone that matches the above decription becomes a type bot
-//therefore english and spanish bot both become type bot as well
+//therefore english and spanish bot both become type bot as well i.e. we dont write englishBot implements bot
+
+//interfaces are implicit so we dont need to define any specific links b/w interfaces and the bots
 type bot interface {
 
 	//a method getGreeting that return type string becomes of type bot
