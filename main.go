@@ -2,6 +2,16 @@ package main
 
 import "fmt"
 
+//interface being used to define what different type of function with return type it should have
+//and anyone that matches the above decription becomes a type bot
+//therefore english and spanish bot both become type bot as well
+type bot interface {
+
+	//a method getGreeting that return type string becomes of type bot
+	//spansh and english bot both have function getGreeting becomes a bot type as well
+	getGreeting() string
+}
+
 type englishBot struct{}
 type spanishBot struct{}
 
@@ -13,14 +23,8 @@ func main() {
 	printGreeting(sb)
 }
 
-//print function for english greeting
-func printGreeting(eb englishBot) {
-	fmt.Println(eb.getGreeting())
-}
-
-//print function for spanish greeting
-func printGreeting(sb spanishBot) {
-	fmt.Println(sb.getGreeting())
+func printGreeting(b bot) {
+	fmt.Println(b.getGreeting())
 }
 
 //creating two bots to generate english and spanish greetings
