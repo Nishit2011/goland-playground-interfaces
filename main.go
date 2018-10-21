@@ -1,10 +1,26 @@
 package main
 
+import "fmt"
+
 type englishBot struct{}
 type spanishBot struct{}
 
 func main() {
+	eb := englishBot{}
+	sb := spanishBot{}
 
+	printGreeting(eb)
+	printGreeting(sb)
+}
+
+//print function for english greeting
+func printGreeting(eb englishBot) {
+	fmt.Println(eb.getGreeting())
+}
+
+//print function for spanish greeting
+func printGreeting(sb spanishBot) {
+	fmt.Println(sb.getGreeting())
 }
 
 //creating two bots to generate english and spanish greetings
